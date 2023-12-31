@@ -30,7 +30,7 @@ sudo setcap 'cap_net_raw,cap_net_admin+eip' /usr/local/lib/python3.9/dist-packag
 - Script "scanner_ble.py" has implemented debug mode, you can verify if everything is working properly, just execute it from console:
 ```
 $ python3 /home/robert/miscale2garmin-6/scanner_ble.py
-Mi Body Composition Scale 2 Garmin Connect v6.0 (scanner_ble.py)
+Mi Body Composition Scale 2 Garmin Connect v6.2 (scanner_ble.py)
 
 18.11.2023-23:23:30 * Starting BLE scan:
   BLE device found with address: 3f:f1:3e:a6:4d:00, non-target device

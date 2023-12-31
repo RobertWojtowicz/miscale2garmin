@@ -6,7 +6,7 @@ from bluepy import btle
 import datetime
 
 # Version Info
-print("Mi Body Composition Scale 2 Garmin Connect v6.0 (scanner_ble.py)")
+print("Mi Body Composition Scale 2 Garmin Connect v6.2 (scanner_ble.py)")
 print("")
 
 # Scale MAC address, please use lowercase letters
@@ -39,7 +39,7 @@ class miScale(btle.DefaultDelegate):
                         Weight = round(lb_weight / 2.2046, 1)
                     else:
                         Weight = (((data[12] & 0xFF) << 8) | (data[11] & 0xFF)) * 0.005
-                    Impedance = ((data[10] & 0xFF) << 8) | (data[9] & 0xFF)
+                        Impedance = ((data[10] & 0xFF) << 8) | (data[9] & 0xFF)
                     if hasImpedance:
                         Unix_time = int(dt.timestamp(dt.strptime(f"{int((data[3] << 8) | data[2])},{int(data[4])},{int(data[5])},{int(data[6])},{int(data[7])},{int(data[8])}", "%Y,%m,%d,%H,%M,%S")))
                         print(datetime.datetime.now().strftime("%d.%m.%Y-%H:%M:%S") + (" * Reading BLE data complete, finished BLE scan"))
